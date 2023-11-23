@@ -60,8 +60,6 @@ if __name__ == "__main__":
     
     phi_psi_angles = calculate_phi_psi(structure)
     
-    # Assuming you have information about secondary structure (replace with your own method)
-    # Example: Assign 'H' for helix, 'E' for sheet, 'C' for coil
     secondary_structure = ['C'] * len(phi_psi_angles['phi'])
     
     plot_ramachandran(phi_psi_angles, secondary_structure)
