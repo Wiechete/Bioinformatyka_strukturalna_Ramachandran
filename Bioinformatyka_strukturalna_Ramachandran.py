@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from Bio import PDB
 from Bio.PDB.Polypeptide import three_to_one
 import sys
+import os
 
 # funkcja obliczajaca katy phi i psi dla kazdego aminokwasu w strukturze
 def calculate_phi_psi(structure):
@@ -10,7 +11,7 @@ def calculate_phi_psi(structure):
     
     for model in structure:
         for chain in model:
-            polypeptides = PDB.PPBuilder().build_peptides(chain)# buduje polipeptydy z lancucha w strukturze bia³ka
+            polypeptides = PDB.PPBuilder().build_peptides(chain)# buduje polipeptydy z lancucha w strukturze bialka
             
             for poly_index, poly in enumerate(polypeptides):
                 phi_psi_angles = poly.get_phi_psi_list()# wez phi i psi z residue
@@ -59,6 +60,7 @@ if __name__ == "__main__":
     structure = parser.get_structure(pdb_id, pdb_file)
     
     phi_psi_angles = calculate_phi_psi(structure)
+    
     
     secondary_structure = ['C'] * len(phi_psi_angles['phi'])
     
