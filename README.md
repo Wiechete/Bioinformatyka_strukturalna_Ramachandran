@@ -1,4 +1,3 @@
-Użytkowanie programu:
-1. Otworz wiersz polecenia.
-2. Znajdź przez terminal program z rozszerzeniem .py
-3. Uruchom go podając jako argument ścieżkę do pliku .pdb
+Zasady programu:
+1. Uruchom program z terminala
+2. Uruchom go komendą python "nazwa pliku źródłowego" "ścieżka do pliku pdb"
